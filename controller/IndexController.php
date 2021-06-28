@@ -100,7 +100,8 @@ class IndexController{
 			$this->items['README.md']['path'] = get_absolute_path($this->path).'README.md';
 			$readme = $this->get_content($this->items['README.md']);
 			$Parsedown = new Parsedown();
-			$readme = $Parsedown->text($readme);
+			// $readme = $Parsedown->text($readme);
+			$readme = $readme;
 			//不在列表中展示
 			unset($this->items['README.md']);
 		}
