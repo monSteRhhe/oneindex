@@ -40,14 +40,35 @@
 			<!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>-->
 		</div>
 		</div>
+        <!-- 横向小广告 -->
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5978423097771370"
+             data-ad-slot="7388473921"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+		<!-- Google AD End -->
     	<?php view::section('content');?>
   	</div>
 	<!--<script src="//<?php print($_SERVER['HTTP_HOST']) ?>/view/nexmoe/theme/personjs.js"></script>-->
 	<!--底部-->
 	<div class="fotter">
 	    <p>小莫网盘 @2020-<?=date("Y") ?> 如果网盘中有包含侵犯您权利的内容，请联系邮箱xm@xmsky.onmicrosoft.com</p>
+	    <p>
+	        <a href="https://www.aoe.top/notes/490" target="_blank">下载速度慢提速方案</a>|
+	        <a href="https://www.aoe.top/notes/497" target="_blank">下载提示需要登录？</a>
+	    </p>
 	    <p><a href="javascript:buyMeCoffee()">给小莫投食</a></p>
-	    <div class="buyMeCoffee"><img src="//<?php print($_SERVER['HTTP_HOST']) ?>/view/nexmoe/theme/buyMeCoffee.png" attr="给小莫投食" onclick="buyMeCoffee()"></div>
+	    <div class="buyMeCoffee">
+			<picture onclick="buyMeCoffee()">
+				<source srcset="https://code.aoe.top/img/buyMeCoffee/buyMeCoffee.webp" type="image/webp">
+				<img src="https://code.aoe.top/img/buyMeCoffee/buyMeCoffee.png" alt="给小莫投食">
+			</picture>
+		</div>
 	</div>
 	<script type='text/javascript' src='//<?php print($_SERVER['HTTP_HOST']) ?>/view/nexmoe/theme/layer.js'></script>
     <!--Google广告代码-->
@@ -84,7 +105,13 @@
                 resize:false,
                 scrollbar:false,
                 shadeClose : true,
-                content:'<div class="donate-box"><div class="meta-pay text-center"><strong>小莫已经懒到不想动了<br/>或许给小莫投点食能让小莫有点动力</strong></div><div class="qr-pay text-center"><img class="pay-img" id="alipay_qr" src="http://www.aoe.top/wp-content/uploads/2020/04/zfb.png"><img class="pay-img d-none" id="wechat_qr" src="http://www.aoe.top/wp-content/uploads/2020/04/wx.png"></div><div class="choose-pay text-center mt-2"><input id="alipay" type="radio" name="pay-method" checked><label for="alipay" class="pay-button"><img src="https://www.aoe.top/wp-content/themes/kratos-pjax-master/static/images/alipay.png"></label><input id="wechatpay" type="radio" name="pay-method"><label for="wechatpay" class="pay-button"><img src="https://www.aoe.top/wp-content/themes/kratos-pjax-master/static/images/wechat.png"></label></div></div>'
+                content:'<div class="donate-box"><div class="meta-pay text-center"><strong>小莫已经懒到不想动了<br/>或许给小莫投点食能让小莫有点动力</strong></div> ' + 
+				'<div class="qr-pay text-center"><img class="pay-img" id="alipay_qr" src="https://code.aoe.top/img/buyMeCoffee/zfb.png">' +
+				'<img class="pay-img d-none" id="wechat_qr" src="https://code.aoe.top/img/buyMeCoffee/wx.png"></div><div class="choose-pay text-center mt-2">' +
+				'<input id="alipay" type="radio" name="pay-method" checked><label for="alipay" class="pay-button">' +
+				'<img src="https://code.aoe.top/img/buyMeCoffee/alipay.png"></label>' +
+				'<input id="wechatpay" type="radio" name="pay-method"><label for="wechatpay" class="pay-button">' +
+				'<img src="https://code.aoe.top/img/buyMeCoffee/wechat.png"></label></div></div>'
             });
             $('.choose-pay input[type="radio"]').click(function(){
                 var id= $(this).attr('id');

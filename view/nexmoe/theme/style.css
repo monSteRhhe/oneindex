@@ -88,14 +88,14 @@ a{
 }
 /* 定义动画 */
 @-webkit-keyframes fadeIn {
-0% {
-opacity: 0; /*初始状态 透明度为0*/
-}
-50% {
-opacity: 0; /*中间状态 透明度为0*/
-}
-100% {
-opacity: 1; /*结尾状态 透明度为1*/
+	0% {
+		opacity: 0; /*初始状态 透明度为0*/
+	}
+	50% {
+		opacity: 0; /*中间状态 透明度为0*/
+	}
+	100% {
+		opacity: 1; /*结尾状态 透明度为1*/
 }
 }
 /* 伪类出现 */
@@ -132,12 +132,14 @@ body {
 }
 
 .nexmoe-item {
-	margin: 20px -8px 0!important;
+	/* margin: 20px -8px 0!important; */
+	margin: 0 -8px 20px 0 !important;
 	padding: 15px!important;
 	border-radius: 5px;
 	-webkit-box-shadow: 1px 1px 20px 1px rgba(0,0,0,.05);
 	box-shadow: 1px 1px 20px 1px rgba(0,0,0,.05);
-	background-color: rgba(255, 255, 255, 0.7)
+	background-color: rgba(255, 255, 255, 0.7);
+	font-size: 12px;
 }
 
 .mdui-img-fluid,.mdui-video-fluid {
@@ -152,8 +154,8 @@ body {
 	margin: 0!important;
 	border-radius: 5px;
 	padding: 0 10px 0 5px!important;
-	border: 1px solid #eee;
-	margin-bottom: 10px!important
+	/* border: 1px solid #eee; */
+	/* margin-bottom: 10px!important */
 }
 
 .mdui-list-item:last-child {
@@ -166,7 +168,8 @@ body {
 
 .mdui-toolbar {
 	width: auto;
-	margin-top: 30px!important
+	/* margin-top: 30px!important */
+	border-radius: 0 0 5px 5px;
 }
 
 .mdui-appbar .mdui-toolbar {
@@ -274,7 +277,7 @@ body {
     margin-top: 20px;
     text-align: center;
     width: 100%;
-    line-height: 50px;
+    line-height: 30px;
     background-color: rgba(255, 255, 255, 0.7);
 }
 .fotter a{
