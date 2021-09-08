@@ -28,7 +28,46 @@
 <div class="mdui-container-fluid">
     <div class="nexmoe-item">
 
+        
+        <?php if($language == "Markdown"): ?>
+            <div class="show-readme" id="show_readme">
+                <textarea name="show_readme" style="display:none;"><?php e($content);?></textarea>
+            </div>	
+
+            <!-- editor.md引用 -->
+            <!-- https://pan.aoe.top/scripts/lib/editor.md/editormd.js -->
+            <script src="https://code.aoe.top/libs/jquery/jquery-3.6.0.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://code.aoe.top/libs/editor.md/css/editormd.min.css" >
+            <script type="text/javascript" src="https://code.aoe.top/libs/editor.md/lib/marked.min.js"></script>
+            <script type="text/javascript" src="https://code.aoe.top/libs/editor.md/lib/raphael.min.js"></script>
+            <script type="text/javascript" src="https://code.aoe.top/libs/editor.md/lib/prettify.min.js"></script>
+            <script type="text/javascript" src="https://code.aoe.top/libs/editor.md/lib/underscore.min.js"></script>
+            <script type="text/javascript" src="https://code.aoe.top/libs/editor.md/lib/sequence-diagram.min.js"></script>
+            <script type="text/javascript" src="https://code.aoe.top/libs/editor.md/lib/flowchart.min.js"></script>
+            <script type="text/javascript" src="https://code.aoe.top/libs/editor.md/lib/jquery.flowchart.min.js"></script>
+            <script type="text/javascript" src="https://code.aoe.top/libs/editor.md/editormd.js"></script>
+            <script>
+                var testEditor;
+                testEditor = editormd.markdownToHTML("show_readme", {
+                    // htmlDecode      : "style,script,sub,sup,embed|onclick,title,onmouseover,onmouseout,style",  // Filter tags, and all on* attributes
+                    htmlDecode      : "style,script,sub,sup,embed|on*",  // Filter tags, and all on* attributes
+                    // htmlDecode      : true,  // Filter tags, and all on* attributes
+                    syncScrolling   : "single",
+                    emoji           : true,
+                    taskList        : true,
+                    tocm            : true,  // 解析下拉目录
+                    tex             : false,  // 默认不解析
+                    flowChart       : true,  // 默认不解析
+                    sequenceDiagram : true,  // 默认不解析
+                    path            : "https://code.aoe.top/libs/editor.md/lib/",
+                });
+                $("#show_readme a").attr("target", "_blank");
+            </script>
+        <?php else: ?>
+
         <pre id="editor" ><?php echo htmlentities($content);?></pre>
+
+        <?php endif; ?>
 
         <div class="mdui-textfield">
 	        <label class="mdui-textfield-label">下载地址</label>
