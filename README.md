@@ -1,6 +1,19 @@
 # OneIndex
 Onedrive Directory Index
 
+### 伪静态
+```
+if (!-f $request_filename){
+    set $rule_0 1$rule_0;
+}
+if (!-d $request_filename){
+    set $rule_0 2$rule_0;
+}
+if ($rule_0 = "21"){
+    rewrite ^/(.*)$ /index.php?/$1 last;
+}
+```
+
 ## 功能：
 不占用服务器空间，不走服务器流量，  
 
